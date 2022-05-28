@@ -8,15 +8,18 @@ function App() {
       </header>
 
       <main className="container mx-auto px-4 sm:px-0">
-        <button className="flex items-center text-xl text-purple-600 font-bold cursor-pointer sm:text-2xl before:content-['+'] before:w-8 before:h-8 before:mr-3 before:bg-purple-600 before:text-white before:text-base before:rounded-full before:inline-flex before:justify-center before:items-center">
-          Добавить новую задачу
-        </button>
+        <h2 className="text-xl text-purple-600 font-bold sm:text-2xl">Добавить новую задачу</h2>
 
-        <input
-          className="w-] form-input mt-6  py-2 px-4 text-md w-full sm:text-lg sm:w-[500px] rounded-md placeholder:text-gray-400"
-          type="text"
-          placeholder="Введите текст..."
-        />
+        <div className="flex items-center mt-6">
+          <input
+            className="form-input grow mr-3 py-2 px-4 text-md sm:text-lg sm:max-w-[500px] rounded-md placeholder:text-gray-400"
+            type="text"
+            placeholder="Введите текст..."
+          />
+          <button className="w-10 h-10 bg-purple-600 text-white text-2xl text-bold  rounded-full flex justify-center items-center">
+            +
+          </button>
+        </div>
 
         <ul className="mt-12 w-full sm:w-[500px]">
           <li className="mt-5 flex items-center">
