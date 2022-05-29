@@ -1,14 +1,14 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  todos: [{ id: Date.now(), text: 'Todo text', isCompleted: true }],
+  todos: [{ id: Date.now(), text: 'Todo title', isCompleted: true }],
 };
 
 export const todosSlice = createSlice({
   name: 'todos',
   initialState,
   reducers: {
-    add: (state, action) => {
+    add(state, action) {
       const todo = {
         id: Date.now(),
         text: action.payload,
@@ -17,7 +17,7 @@ export const todosSlice = createSlice({
       state.todos = [todo, ...state.todos];
     },
 
-    changeTodo: (state, action) => {
+    change(state, action) {
       const { id, text } = action.payload;
       const copy = [...state.todos];
       const todo = copy.find((todo) => todo.id === id);
@@ -25,7 +25,7 @@ export const todosSlice = createSlice({
       state.todos = copy;
     },
 
-    toggleTodo: (state, action) => {
+    toggle(state, action) {
       const id = action.payload;
       const copy = [...state.todos];
       const todo = copy.find((todo) => todo.id === id);
@@ -33,7 +33,7 @@ export const todosSlice = createSlice({
       state.todos = copy;
     },
 
-    removeTodo: (state, action) => {
+    remove(state, action) {
       const id = action.payload;
       state.todos = state.todos.filter((todo) => todo.id !== id);
     },
@@ -41,6 +41,6 @@ export const todosSlice = createSlice({
 });
 
 // Action creators are generated for each case reducer function
-export const { add, changeTodo, toggleTodo, removeTodo } = todosSlice.actions;
+export const { add, change, toggle, remove } = todosSlice.actions;
 
 export default todosSlice.reducer;
