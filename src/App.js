@@ -1,7 +1,7 @@
 import React from 'react';
 
-import AddTodo from './components/CreateTodo';
-import TodoList from './components/todos';
+import AddTodo from './components/todos/CreateTodo';
+import TodoList from './components/todos/TodoList';
 
 function App() {
   return (

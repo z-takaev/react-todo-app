@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { add } from '../store/slices/todosSlice';
+import { add } from '../../store/slices/todosSlice';
 import { MdAdd } from 'react-icons/md';
 
 function CreateTodo() {

@@ -4,7 +4,7 @@ import { change, toggle, remove } from '../../store/slices/todosSlice';
 import classNames from 'classnames';
 import { BsTrash } from 'react-icons/bs';
 
-import Checkbox from '../ui/checkbox';
+import Checkbox from '../ui/Checkbox';
 
 function TodoItem({ todo }) {
   const dispatch = useDispatch();
@@ -30,7 +30,7 @@ function TodoItem({ todo }) {
       />
       <input
         className={classNames(
-          'form-input grow-1 mx-3 py-1 px-3 font-medium border-0 text-xl rounded-md  disabled:text-gray-400',
+          'w-full form-input grow-1 mx-3 py-1 px-3 font-medium border-0 text-xl rounded-md  disabled:text-gray-400',
           { 'line-through': todo.isCompleted },
         )}
         disabled={todo.isCompleted}

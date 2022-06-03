@@ -6,7 +6,7 @@ function checkbox({ isChecked, onToggle }) {
   return (
     <div
       className={classNames(
-        'w-6 h-6 flex justify-center items-center  text-xl text-white cursor-pointer border-2 border-purple-600 rounded-md',
+        'w-8 h-6 flex justify-center items-center text-xl text-white cursor-pointer border-2 border-purple-600 rounded-md',
         {
           'bg-purple-600': isChecked,
         },

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 
-import TodoItem from './TodoItem';
+import TodoItem from './TodoListItem';
 import NotTodos from './NotTodos';
 
 function TodoList() {
