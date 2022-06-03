@@ -30,7 +30,7 @@ function TodoItem({ todo }) {
       />
       <input
         className={classNames(
-          'w-full form-input grow-1 mx-3 py-1 px-3 font-medium border-0 text-xl rounded-md  disabled:text-gray-400',
+          'w-full form-input grow-1 mx-3 py-1 px-3 font-medium border-0 text-xl rounded-md bg-slate-200  disabled:text-gray-400',
           { 'line-through': todo.isCompleted },
         )}
         disabled={todo.isCompleted}

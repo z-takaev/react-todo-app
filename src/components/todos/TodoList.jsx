@@ -1,4 +1,5 @@
 import React from 'react';
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
 import { useSelector } from 'react-redux';
 
 import TodoItem from './TodoListItem';
@@ -9,11 +10,13 @@ function TodoList() {
   return (
     <>
       {todos.length ? (
-        <ul className="mt-12 w-full sm:w-[500px]">
+        <TransitionGroup className="mt-12 w-full sm:w-[500px]">
           {todos.map((item) => (
-            <TodoItem key={item.id} todo={item} />
+            <CSSTransition key={item.id} timeout={700} classNames="todo">
+              <TodoItem todo={item} />
+            </CSSTransition>
           ))}
-        </ul>
+        </TransitionGroup>
       ) : (
         <NotTodos />
       )}
