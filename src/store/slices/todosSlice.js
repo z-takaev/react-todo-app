@@ -1,4 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
+import { v4 } from 'uuid';
 
 const initialState = {
   todos: [{ id: Date.now(), text: 'Todo title', isCompleted: true }],
@@ -10,7 +11,7 @@ export const todosSlice = createSlice({
   reducers: {
     add(state, action) {
       const todo = {
-        id: Date.now(),
+        id: v4(),
         text: action.payload,
         isCompleted: false,
       };
